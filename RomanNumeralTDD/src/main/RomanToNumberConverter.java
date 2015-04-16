@@ -24,7 +24,9 @@ public class RomanToNumberConverter {
 			case 'L':
 				inputAsIntegers[i] = 50;
 				break;
-
+			case 'C':
+				inputAsIntegers[i] = 100;
+				break;
 			}
 
 		}

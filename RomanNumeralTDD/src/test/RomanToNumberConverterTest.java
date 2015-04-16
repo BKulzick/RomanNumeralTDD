@@ -89,9 +89,9 @@ public class RomanToNumberConverterTest {
 	}
 	
 	@Test
-	public void whenGivenLXXIVOutputShouldBeSeventyFour() {
-		assertEquals(74,
-				numberConverter.convertFromRomanNumeralToInt("LXXIV"));
+	public void whenGivenCOutputShouldBeHundred() {
+		assertEquals(100,
+				numberConverter.convertFromRomanNumeralToInt("C"));
 	}
 	
 	
