@@ -7,6 +7,9 @@ public class RomanNumeralConverter {
 			return "I";
 		if (inputNumber == 5)
 			return "V";
+		if (inputNumber == 10)
+			return "X";
+		
 		
 		return null;
 	}

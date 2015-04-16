@@ -25,6 +25,9 @@ public class RomanNumeralTest {
 		assertEquals("V", romanNumeral.convertFromIntToRomanNumeral(5));
 	}
 	
+	@Test
+	public void whenGivenTenOutputShouldBeX() {
+		assertEquals("X", romanNumeral.convertFromIntToRomanNumeral(10));
 	
-
+	}
 }
