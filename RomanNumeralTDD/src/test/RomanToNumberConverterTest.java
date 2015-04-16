@@ -82,6 +82,12 @@ public class RomanToNumberConverterTest {
 				numberConverter.convertFromRomanNumeralToInt("XXIV"));
 	}
 	
+	@Test
+	public void whenGivenLOutputShouldBeFifty() {
+		assertEquals(50,
+				numberConverter.convertFromRomanNumeralToInt("L"));
+	}
+	
 	
 	
 	
