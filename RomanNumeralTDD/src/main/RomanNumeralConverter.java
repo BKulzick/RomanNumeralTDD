@@ -6,104 +6,32 @@ public class RomanNumeralConverter {
 		StringBuilder answer = new StringBuilder();
 		int inputLength = inputNumber.length();
 		char[] inputCharacters = new char[inputLength];
-		inputCharacters=inputNumber.toCharArray();
+		inputCharacters = inputNumber.toCharArray();
 		char tensNumber = '0';
 		char onesNumber = '0';
 		char hundredsNumber = '0';
-		
-		if (inputLength ==3){
-			hundredsNumber=inputCharacters[inputLength-3];
-			tensNumber = inputCharacters[inputLength-2];
-			onesNumber = inputCharacters[inputLength-1];
+
+		if (inputLength == 3) {
+			hundredsNumber = inputCharacters[inputLength - 3];
+			tensNumber = inputCharacters[inputLength - 2];
+			onesNumber = inputCharacters[inputLength - 1];
 		}
-		
-		else if (inputLength == 2){
-			tensNumber = inputCharacters[inputLength-2];
-			onesNumber = inputCharacters[inputLength-1];
-		}else{
+
+		else if (inputLength == 2) {
+			tensNumber = inputCharacters[inputLength - 2];
+			onesNumber = inputCharacters[inputLength - 1];
+		} else {
 			onesNumber = inputCharacters[0];
 		}
-		
-		switch (hundredsNumber){
-		case '9':
-			answer.append("CM");
-			break;
-		
-		case '8':
-			answer.append("DCCC");
-			break;
-		
-		case '7':
-			answer.append("DCC");
-			break;
-		
-		case '6':
-			answer.append("DC");
-			break;
-		
-		case '5':
-			answer.append("D");
-			break;
-		
-		case '4':
-			answer.append("CD");
-			break;
-		
-		case '3':
-			answer.append("CCC");
-			break;
-		
-		case '2':
-			answer.append("CC");
-			break;
-	
-		case '1':
-			answer.append("C");
-			break;
-		
-		}
-	
 
-		switch (tensNumber) {
-		
-		case '9':
-			answer.append("XC");
-			break;
-		
-		case '8':
-			answer.append("LXXX");
-			break;
-		
-		case '7':
-			answer.append("LXX");
-			break;
-		
-		case '6':
-			answer.append("LX");
-			break;
-		
-		case '5':
-			answer.append("L");
-			break;
-		
-		case '4':
-			answer.append("XL");
-			break;
-		
-		case '3':
-			answer.append("XXX");
-			break;
-		
-		case '2':
-			answer.append("XX");
-			break;
-	
-		case '1':
-			answer.append("X");
-			break;
-		}
-		
-		
+		hundredconverter(answer, hundredsNumber);
+		tensconverter(answer, tensNumber);
+		onesConverter(answer, onesNumber);
+		return answer;
+
+	}
+
+	private void onesConverter(StringBuilder answer, char onesNumber) {
 		switch (onesNumber) {
 
 		case '3':
@@ -136,7 +64,87 @@ public class RomanNumeralConverter {
 
 		}
 
-		return answer;
+	}
 
+	private void tensconverter(StringBuilder answer, char tensNumber) {
+		switch (tensNumber) {
+
+		case '9':
+			answer.append("XC");
+			break;
+
+		case '8':
+			answer.append("LXXX");
+			break;
+
+		case '7':
+			answer.append("LXX");
+			break;
+
+		case '6':
+			answer.append("LX");
+			break;
+
+		case '5':
+			answer.append("L");
+			break;
+
+		case '4':
+			answer.append("XL");
+			break;
+
+		case '3':
+			answer.append("XXX");
+			break;
+
+		case '2':
+			answer.append("XX");
+			break;
+
+		case '1':
+			answer.append("X");
+			break;
+		}
+	}
+
+	private void hundredconverter(StringBuilder answer, char hundredsNumber) {
+		switch (hundredsNumber) {
+		case '9':
+			answer.append("CM");
+			break;
+
+		case '8':
+			answer.append("DCCC");
+			break;
+
+		case '7':
+			answer.append("DCC");
+			break;
+
+		case '6':
+			answer.append("DC");
+			break;
+
+		case '5':
+			answer.append("D");
+			break;
+
+		case '4':
+			answer.append("CD");
+			break;
+
+		case '3':
+			answer.append("CCC");
+			break;
+
+		case '2':
+			answer.append("CC");
+			break;
+
+		case '1':
+			answer.append("C");
+			break;
+
+		}
 	}
 }
