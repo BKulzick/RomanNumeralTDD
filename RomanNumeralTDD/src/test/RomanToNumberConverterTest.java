@@ -88,6 +88,13 @@ public class RomanToNumberConverterTest {
 				numberConverter.convertFromRomanNumeralToInt("L"));
 	}
 	
+	@Test
+	public void whenGivenLXXIVOutputShouldBeSeventyFour() {
+		assertEquals(74,
+				numberConverter.convertFromRomanNumeralToInt("LXXIV"));
+	}
+	
+	
 	
 	
 	
