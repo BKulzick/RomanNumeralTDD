@@ -9,11 +9,58 @@ public class RomanNumeralConverter {
 		inputCharacters=inputNumber.toCharArray();
 		char tensNumber = '0';
 		char onesNumber = '0';
-		if (inputLength > 1){
+		char hundredsNumber = '0';
+		
+		if (inputLength ==3){
+			hundredsNumber=inputCharacters[inputLength-3];
+			tensNumber = inputCharacters[inputLength-2];
+			onesNumber = inputCharacters[inputLength-1];
+		}
+		
+		else if (inputLength == 2){
 			tensNumber = inputCharacters[inputLength-2];
 			onesNumber = inputCharacters[inputLength-1];
 		}else{
 			onesNumber = inputCharacters[0];
+		}
+		
+		switch (hundredsNumber){
+		case '9':
+			answer.append("CM");
+			break;
+		
+		case '8':
+			answer.append("DCCC");
+			break;
+		
+		case '7':
+			answer.append("DCC");
+			break;
+		
+		case '6':
+			answer.append("DC");
+			break;
+		
+		case '5':
+			answer.append("D");
+			break;
+		
+		case '4':
+			answer.append("CD");
+			break;
+		
+		case '3':
+			answer.append("CCC");
+			break;
+		
+		case '2':
+			answer.append("CC");
+			break;
+	
+		case '1':
+			answer.append("C");
+			break;
+		
 		}
 	
 
