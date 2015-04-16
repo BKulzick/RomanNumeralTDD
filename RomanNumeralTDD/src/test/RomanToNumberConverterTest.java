@@ -52,7 +52,11 @@ public class RomanToNumberConverterTest {
 				numberConverter.convertFromRomanNumeralToInt("VII"));
 	}
 	
-	
+	@Test
+	public void whenGivenXOutputShouldBeTen() {
+		assertEquals(10,
+				numberConverter.convertFromRomanNumeralToInt("X"));
+	}
 	
 	
 	

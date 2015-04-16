@@ -18,6 +18,10 @@ public class RomanToNumberConverter {
 			case 'V':
 				inputAsIntegers[i] = 5;
 				break;
+			case 'X':
+				inputAsIntegers[i] = 10;
+				break;	
+				
 			}
 
 		}
