@@ -87,8 +87,14 @@ public class RomanNumeralTest {
 	}
 	
 	@Test
-	public void whenGivenOneHundredNinetyNineOutputShouldBeXXXIIIandLXVIII(){
+	public void whenGivenOneHundredNinetyNineOutputShouldBeCXCIX(){
 		assertEquals("CXCIX", romanNumeral.convertFromIntToRomanNumeral("199")
+				.toString());
+	}
+	
+	@Test
+	public void whenGivenNineHundredNinetyNineOutputShouldBeCMXCIX(){
+		assertEquals("CMXCIX", romanNumeral.convertFromIntToRomanNumeral("999")
 				.toString());
 	}
 }
