@@ -9,37 +9,48 @@ import org.junit.Test;
 public class RomanNumeralTest {
 
 	RomanNumeralConverter romanNumeral;
+
 	@Before
-	
-	public void setUp(){
-		romanNumeral= new RomanNumeralConverter();
+	public void setUp() {
+		romanNumeral = new RomanNumeralConverter();
 	}
-	
+
 	@Test
 	public void whenGivenOneOutputShouldBeI() {
-		assertEquals("I", (romanNumeral.convertFromIntToRomanNumeral(1)).toString());
+		assertEquals("I",
+				(romanNumeral.convertFromIntToRomanNumeral(1)).toString());
 	}
-	
+
 	@Test
 	public void whenGivenFiveOutputShouldBeV() {
-		assertEquals("V", romanNumeral.convertFromIntToRomanNumeral(5).toString());
+		assertEquals("V", romanNumeral.convertFromIntToRomanNumeral(5)
+				.toString());
 	}
-	
+
 	@Test
 	public void whenGivenTenOutputShouldBeX() {
-		assertEquals("X", romanNumeral.convertFromIntToRomanNumeral(10).toString());
-	
+		assertEquals("X", romanNumeral.convertFromIntToRomanNumeral(10)
+				.toString());
+
 	}
+
 	@Test
 	public void whenGivenTwoOutputShouldBeII() {
-		assertEquals("II", romanNumeral.convertFromIntToRomanNumeral(2).toString());
-	
+		assertEquals("II", romanNumeral.convertFromIntToRomanNumeral(2)
+				.toString());
+
 	}
-	
+
 	@Test
 	public void whenGivenThreeOutputShouldBeIII() {
-		assertEquals("III", romanNumeral.convertFromIntToRomanNumeral(3).toString());
-	
+		assertEquals("III", romanNumeral.convertFromIntToRomanNumeral(3)
+				.toString());
+
 	}
-	
+
+	@Test
+	public void whenGivenFourOutputShouldBeIV() {
+		assertEquals("IV", romanNumeral.convertFromIntToRomanNumeral(4)
+				.toString());
+	}
 }
