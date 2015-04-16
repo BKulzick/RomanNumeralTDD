@@ -36,4 +36,10 @@ public class RomanNumeralTest {
 	
 	}
 	
+	@Test
+	public void whenGivenThreeOutputShouldBeIII() {
+		assertEquals("III", romanNumeral.convertFromIntToRomanNumeral(3).toString());
+	
+	}
+	
 }
