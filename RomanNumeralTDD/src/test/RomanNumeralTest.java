@@ -17,17 +17,23 @@ public class RomanNumeralTest {
 	
 	@Test
 	public void whenGivenOneOutputShouldBeI() {
-		assertEquals("I", romanNumeral.convertFromIntToRomanNumeral(1));
+		assertEquals("I", (romanNumeral.convertFromIntToRomanNumeral(1)).toString());
 	}
 	
 	@Test
 	public void whenGivenFiveOutputShouldBeV() {
-		assertEquals("V", romanNumeral.convertFromIntToRomanNumeral(5));
+		assertEquals("V", romanNumeral.convertFromIntToRomanNumeral(5).toString());
 	}
 	
 	@Test
 	public void whenGivenTenOutputShouldBeX() {
-		assertEquals("X", romanNumeral.convertFromIntToRomanNumeral(10));
+		assertEquals("X", romanNumeral.convertFromIntToRomanNumeral(10).toString());
 	
 	}
+	@Test
+	public void whenGivenTwoOutputShouldBeII() {
+		assertEquals("II", romanNumeral.convertFromIntToRomanNumeral(2).toString());
+	
+	}
+	
 }
