@@ -100,7 +100,11 @@ public class RomanToNumberConverterTest {
 				numberConverter.convertFromRomanNumeralToInt("CCCXLIX"));
 	}
 	
-	
+	@Test
+	public void whenGivenMOutputShouldBeOneThousand() {
+		assertEquals(1000,
+				numberConverter.convertFromRomanNumeralToInt("M"));
+	}
 	
 	
 	

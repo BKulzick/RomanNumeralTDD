@@ -27,6 +27,9 @@ public class RomanToNumberConverter {
 			case 'C':
 				inputAsIntegers[i] = 100;
 				break;
+			case 'M':
+				inputAsIntegers[i] = 1000;
+				break;
 			}
 
 		}
