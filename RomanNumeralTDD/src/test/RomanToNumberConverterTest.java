@@ -40,6 +40,11 @@ public class RomanToNumberConverterTest {
 				numberConverter.convertFromRomanNumeralToInt("IV"));
 	}
 	
+	@Test
+	public void whenGivenVIOutputShouldBeSix() {
+		assertEquals(6,
+				numberConverter.convertFromRomanNumeralToInt("VI"));
+	}
 	
 	
 	
