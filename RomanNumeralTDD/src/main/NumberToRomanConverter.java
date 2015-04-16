@@ -1,6 +1,6 @@
 package main;
 
-public class RomanNumeralConverter {
+public class NumberToRomanConverter {
 
 	public StringBuilder convertFromIntToRomanNumeral(String inputNumber) {
 		StringBuilder answer = new StringBuilder();

@@ -1,18 +1,18 @@
 package test;
 
 import static org.junit.Assert.*;
-import main.RomanNumeralConverter;
+import main.NumberToRomanConverter;
 
 import org.junit.Before;
 import org.junit.Test;
 
 public class RomanNumeralTest {
 
-	RomanNumeralConverter romanNumeral;
+	NumberToRomanConverter romanNumeral;
 
 	@Before
 	public void setUp() {
-		romanNumeral = new RomanNumeralConverter();
+		romanNumeral = new NumberToRomanConverter();
 	}
 
 	@Test
