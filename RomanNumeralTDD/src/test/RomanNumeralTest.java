@@ -53,4 +53,11 @@ public class RomanNumeralTest {
 		assertEquals("IV", romanNumeral.convertFromIntToRomanNumeral(4)
 				.toString());
 	}
+	
+	@Test
+	public void whenGivenNineOutputShouldBeIX() {
+		assertEquals("IX", romanNumeral.convertFromIntToRomanNumeral(9)
+				.toString());
+	}
+	
 }
