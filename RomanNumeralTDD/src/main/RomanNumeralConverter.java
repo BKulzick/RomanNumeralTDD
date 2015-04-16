@@ -10,8 +10,16 @@ public class RomanNumeralConverter {
 		char tensNumber = '0';
 		char onesNumber = '0';
 		char hundredsNumber = '0';
+		char thousandsNumber = '0';
 
-		if (inputLength == 3) {
+		if (inputLength == 4) {
+			thousandsNumber = inputCharacters[inputLength -4];
+			hundredsNumber = inputCharacters[inputLength - 3];
+			tensNumber = inputCharacters[inputLength - 2];
+			onesNumber = inputCharacters[inputLength - 1];
+		}
+		
+		else if (inputLength == 3) {
 			hundredsNumber = inputCharacters[inputLength - 3];
 			tensNumber = inputCharacters[inputLength - 2];
 			onesNumber = inputCharacters[inputLength - 1];
@@ -23,11 +31,29 @@ public class RomanNumeralConverter {
 		} else {
 			onesNumber = inputCharacters[0];
 		}
-
+		thousandsConverter(answer,thousandsNumber);
 		hundredconverter(answer, hundredsNumber);
 		tensconverter(answer, tensNumber);
 		onesConverter(answer, onesNumber);
+		
 		return answer;
+
+	}
+	
+	private void thousandsConverter(StringBuilder answer, char thousandsNumber) {
+		switch (thousandsNumber) {
+
+		case '1':
+			answer.append("M");
+			break;
+		case '2':
+			answer.append("MM");
+			break;
+		case '3':
+			answer.append("MMM");
+			break;
+			// Stops at 3999 due to change in notation above 4000.
+		}
 
 	}
 

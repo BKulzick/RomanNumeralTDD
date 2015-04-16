@@ -97,4 +97,9 @@ public class RomanNumeralTest {
 		assertEquals("CMXCIX", romanNumeral.convertFromIntToRomanNumeral("999")
 				.toString());
 	}
+	@Test
+	public void whenGivenThreeThousdandSixHundredNinetyNineOutputShouldBeMMMDCXCIX(){
+		assertEquals("MMMDCXCIX", romanNumeral.convertFromIntToRomanNumeral("3699")
+				.toString());
+	}
 }
