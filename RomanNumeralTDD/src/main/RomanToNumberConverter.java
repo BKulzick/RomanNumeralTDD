@@ -2,6 +2,10 @@ package main;
 
 public class RomanToNumberConverter {
 
+	//made assumption that correct Roman numeral input would be given, 
+	//otherwise would have put in guard clauses or checkAnswer method to ensure proper usage 
+	//of Roman numerals.
+	
 	public int convertFromRomanNumeralToInt(String romanNumeralInput) {
 
 		int answer = 0;
