@@ -94,6 +94,12 @@ public class RomanToNumberConverterTest {
 				numberConverter.convertFromRomanNumeralToInt("C"));
 	}
 	
+	@Test
+	public void whenGivenCCCXLIXOutputShouldBeThreeHundredFortyNine() {
+		assertEquals(349,
+				numberConverter.convertFromRomanNumeralToInt("CCCXLIX"));
+	}
+	
 	
 	
 	
