@@ -21,4 +21,13 @@ public class RomanToNumberConverterTest {
 		assertEquals(1,
 				numberConverter.convertFromRomanNumeralToInt("I"));
 	}
+	
+	@Test
+	public void whenGivenIIOutputShouldBeTwo() {
+		assertEquals(2,
+				numberConverter.convertFromRomanNumeralToInt("II"));
+	}
+	
+	
+	
 }

@@ -3,8 +3,27 @@ package main;
 public class RomanToNumberConverter {
 
 	public int convertFromRomanNumeralToInt(String romanNumeralInput) {
-		
-		return 1;
+
+		int answer = 0;
+		int inputLength = romanNumeralInput.length();
+		char[] inputCharacters = new char[inputLength];
+		int[] inputAsIntegers = new int[10];
+		inputCharacters = romanNumeralInput.toCharArray();
+
+		for (int i = 0; i < inputCharacters.length; i++) {
+			switch (inputCharacters[i]) {
+			case 'I':
+				inputAsIntegers[i] = 1;
+			}
+
+		}
+
+		for (int i = 0; i < inputAsIntegers.length; i++) {
+			answer += inputAsIntegers[i];
+
+		}
+
+		return answer;
 	}
 
 }
