@@ -72,5 +72,17 @@ public class RomanNumeralTest {
 				.toString());
 	}
 	
+	@Test
+	public void whenGivenTwentyThreeOutputShouldBeXXIII(){
+		assertEquals("XXIII", romanNumeral.convertFromIntToRomanNumeral("23")
+				.toString());
 	
+	}
+	
+	@Test
+	public void whenGivenThirtyThreeAndSeventyEightOutputShouldBeXXXIIIandLXVIII(){
+		assertEquals("XXIII", romanNumeral.convertFromIntToRomanNumeral("23")
+				.toString());
+	
+	}
 }

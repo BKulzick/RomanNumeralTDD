@@ -19,6 +19,37 @@ public class RomanNumeralConverter {
 
 		switch (tensNumber) {
 		
+		case '9':
+			answer.append("XC");
+			break;
+		
+		case '8':
+			answer.append("LXXX");
+			break;
+		
+		case '7':
+			answer.append("LXX");
+			break;
+		
+		case '6':
+			answer.append("LX");
+			break;
+		
+		case '5':
+			answer.append("L");
+			break;
+		
+		case '4':
+			answer.append("XL");
+			break;
+		
+		case '3':
+			answer.append("XXX");
+			break;
+		
+		case '2':
+			answer.append("XX");
+			break;
 	
 		case '1':
 			answer.append("X");
@@ -29,9 +60,11 @@ public class RomanNumeralConverter {
 		switch (onesNumber) {
 
 		case '3':
-			answer.append("I");
+			answer.append("III");
+			break;
 		case '2':
-			answer.append("I");
+			answer.append("II");
+			break;
 		case '1':
 			answer.append("I");
 			break;
