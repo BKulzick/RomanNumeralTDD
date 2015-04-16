@@ -46,6 +46,13 @@ public class RomanToNumberConverterTest {
 				numberConverter.convertFromRomanNumeralToInt("VI"));
 	}
 	
+	@Test
+	public void whenGivenVIIOutputShouldBeSeven() {
+		assertEquals(7,
+				numberConverter.convertFromRomanNumeralToInt("VII"));
+	}
+	
+	
 	
 	
 	

@@ -28,9 +28,11 @@ public class RomanToNumberConverter {
 				answer -= inputAsIntegers[i];
 			else if (inputAsIntegers[i] == inputAsIntegers[i + 1])
 				answer += inputAsIntegers[i];
-			else if (inputAsIntegers[i] > inputAsIntegers[i + 1]) {
+			else if ((inputAsIntegers[i] >= inputAsIntegers[i + 1]) && inputAsIntegers[i] >=inputAsIntegers[i + 2] ) {
 				answer += inputAsIntegers[i];
 			}
+			
+			
 		}
 
 		return answer;
