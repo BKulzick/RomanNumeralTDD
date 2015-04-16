@@ -28,6 +28,20 @@ public class RomanToNumberConverterTest {
 				numberConverter.convertFromRomanNumeralToInt("II"));
 	}
 	
+	@Test
+	public void whenGivenVOutputShouldBeFive() {
+		assertEquals(5,
+				numberConverter.convertFromRomanNumeralToInt("V"));
+	}
+	
+	@Test
+	public void whenGivenIVOutputShouldBeFour() {
+		assertEquals(4,
+				numberConverter.convertFromRomanNumeralToInt("IV"));
+	}
+	
+	
+	
 	
 	
 }

@@ -14,13 +14,23 @@ public class RomanToNumberConverter {
 			switch (inputCharacters[i]) {
 			case 'I':
 				inputAsIntegers[i] = 1;
+				break;
+			case 'V':
+				inputAsIntegers[i] = 5;
+				break;
 			}
 
 		}
 
-		for (int i = 0; i < inputAsIntegers.length; i++) {
-			answer += inputAsIntegers[i];
+		for (int i = 0; i < inputCharacters.length; i++) {
 
+			if (inputAsIntegers[i] < inputAsIntegers[i + 1])
+				answer -= inputAsIntegers[i];
+			else if (inputAsIntegers[i] == inputAsIntegers[i + 1])
+				answer += inputAsIntegers[i];
+			else if (inputAsIntegers[i] > inputAsIntegers[i + 1]) {
+				answer += inputAsIntegers[i];
+			}
 		}
 
 		return answer;
