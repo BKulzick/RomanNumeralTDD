@@ -57,10 +57,17 @@ public class RomanToNumberConverterTest {
 		assertEquals(10,
 				numberConverter.convertFromRomanNumeralToInt("X"));
 	}
+	
 	@Test
 	public void whenGivenIXOutputShouldBeNine() {
 		assertEquals(9,
 				numberConverter.convertFromRomanNumeralToInt("IX"));
+	}
+	
+	@Test
+	public void whenGivenXIIOutputShouldBeTwelve() {
+		assertEquals(12,
+				numberConverter.convertFromRomanNumeralToInt("XII"));
 	}
 	
 	
