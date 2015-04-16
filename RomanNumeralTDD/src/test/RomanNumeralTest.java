@@ -66,5 +66,10 @@ public class RomanNumeralTest {
 				.toString());
 	}
 	
+	public void whenGivenSeventeenOutputShouldBeXVII(){
+		assertEquals("XVII", romanNumeral.convertFromIntToRomanNumeral("17")
+				.toString());
+	}
+	
 	
 }
