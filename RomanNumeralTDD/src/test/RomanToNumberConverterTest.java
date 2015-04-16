@@ -70,6 +70,20 @@ public class RomanToNumberConverterTest {
 				numberConverter.convertFromRomanNumeralToInt("XII"));
 	}
 	
+	@Test
+	public void whenGivenXVIOutputShouldBeSixteen() {
+		assertEquals(16,
+				numberConverter.convertFromRomanNumeralToInt("XVI"));
+	}
+	
+	@Test
+	public void whenGivenXXIVOutputShouldBeTwentyOne() {
+		assertEquals(24,
+				numberConverter.convertFromRomanNumeralToInt("XXIV"));
+	}
+	
+	
+	
 	
 	
 }

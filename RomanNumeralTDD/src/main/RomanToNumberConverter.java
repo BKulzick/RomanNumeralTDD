@@ -20,8 +20,8 @@ public class RomanToNumberConverter {
 				break;
 			case 'X':
 				inputAsIntegers[i] = 10;
-				break;	
-				
+				break;
+
 			}
 
 		}
@@ -30,13 +30,12 @@ public class RomanToNumberConverter {
 
 			if (inputAsIntegers[i] < inputAsIntegers[i + 1])
 				answer -= inputAsIntegers[i];
-			else if (inputAsIntegers[i] == inputAsIntegers[i + 1])
-				answer += inputAsIntegers[i];
-			else if ((inputAsIntegers[i] >= inputAsIntegers[i + 1]) && inputAsIntegers[i] >=inputAsIntegers[i + 2] ) {
+
+			else if ((inputAsIntegers[i] >= inputAsIntegers[i + 1])
+					&& inputAsIntegers[i] >= inputAsIntegers[i + 2]) {
 				answer += inputAsIntegers[i];
 			}
-			
-			
+
 		}
 
 		return answer;
