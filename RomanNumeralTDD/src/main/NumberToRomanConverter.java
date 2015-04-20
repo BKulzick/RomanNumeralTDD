@@ -2,8 +2,10 @@ package main;
 
 public class NumberToRomanConverter {
 
-	public StringBuilder convertFromIntToRomanNumeral(String inputNumber) {
-		StringBuilder answer = new StringBuilder();
+	private static StringBuilder answer;
+	
+	public static StringBuilder convertFromIntToRomanNumeral(String inputNumber) {
+		answer= new StringBuilder();
 		int inputLength = inputNumber.length();
 		char[] inputCharacters = new char[inputLength];
 		inputCharacters = inputNumber.toCharArray();
@@ -31,16 +33,16 @@ public class NumberToRomanConverter {
 		} else {
 			onesNumber = inputCharacters[0];
 		}
-		thousandsConverter(answer,thousandsNumber);
-		hundredconverter(answer, hundredsNumber);
-		tensconverter(answer, tensNumber);
-		onesConverter(answer, onesNumber);
+		thousandsConverter(thousandsNumber);
+		hundredconverter(hundredsNumber);
+		tensconverter(tensNumber);
+		onesConverter(onesNumber);
 		
 		return answer;
 
 	}
 	
-	private void thousandsConverter(StringBuilder answer, char thousandsNumber) {
+	private static void thousandsConverter(char thousandsNumber) {
 		switch (thousandsNumber) {
 
 		case '1':
@@ -57,7 +59,7 @@ public class NumberToRomanConverter {
 
 	}
 
-	private void onesConverter(StringBuilder answer, char onesNumber) {
+	private static void onesConverter(char onesNumber) {
 		switch (onesNumber) {
 
 		case '3':
@@ -92,7 +94,7 @@ public class NumberToRomanConverter {
 
 	}
 
-	private void tensconverter(StringBuilder answer, char tensNumber) {
+	private static void tensconverter(char tensNumber) {
 		switch (tensNumber) {
 
 		case '9':
@@ -133,7 +135,7 @@ public class NumberToRomanConverter {
 		}
 	}
 
-	private void hundredconverter(StringBuilder answer, char hundredsNumber) {
+	private static void hundredconverter(char hundredsNumber) {
 		switch (hundredsNumber) {
 		case '9':
 			answer.append("CM");
