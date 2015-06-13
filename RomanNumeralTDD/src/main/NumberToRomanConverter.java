@@ -4,11 +4,12 @@ public class NumberToRomanConverter {
 
 	private static StringBuilder answer;
 	
-	public static StringBuilder convertFromIntToRomanNumeral(String inputNumber) {
+	public static StringBuilder convertFromIntegerToRomanNumeral(String inputNumber) {
 		answer= new StringBuilder();
 		int inputLength = inputNumber.length();
-		char[] inputCharacters = new char[inputLength];
-		inputCharacters = inputNumber.toCharArray();
+		
+		char[] inputCharacters =convertStringInputToCharArray(inputNumber, inputLength);
+		
 		char tensNumber = '0';
 		char onesNumber = '0';
 		char hundredsNumber = '0';
@@ -40,6 +41,14 @@ public class NumberToRomanConverter {
 		
 		return answer;
 
+	}
+
+	private static char[] convertStringInputToCharArray(String inputNumber, int inputLength) {
+		
+		char[] inputCharacters = new char[inputLength];
+		inputCharacters = inputNumber.toCharArray();
+		
+		return inputCharacters;
 	}
 	
 	private static void thousandsConverter(char thousandsNumber) {

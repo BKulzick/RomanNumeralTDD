@@ -18,88 +18,88 @@ public class RomanNumeralTest {
 	@Test
 	public void whenGivenOneOutputShouldBeI() {
 		assertEquals("I",
-				(romanNumeral.convertFromIntToRomanNumeral("1")).toString());
+				(romanNumeral.convertFromIntegerToRomanNumeral("1")).toString());
 	}
 
 	@Test
 	public void whenGivenFiveOutputShouldBeV() {
-		assertEquals("V", romanNumeral.convertFromIntToRomanNumeral("5")
+		assertEquals("V", romanNumeral.convertFromIntegerToRomanNumeral("5")
 				.toString());
 	}
 
 	@Test
 	public void whenGivenTenOutputShouldBeX() {
-		assertEquals("X", romanNumeral.convertFromIntToRomanNumeral("10")
+		assertEquals("X", romanNumeral.convertFromIntegerToRomanNumeral("10")
 				.toString());
 
 	}
 
 	@Test
 	public void whenGivenTwoOutputShouldBeII() {
-		assertEquals("II", romanNumeral.convertFromIntToRomanNumeral("2")
+		assertEquals("II", romanNumeral.convertFromIntegerToRomanNumeral("2")
 				.toString());
 
 	}
 
 	@Test
 	public void whenGivenThreeOutputShouldBeIII() {
-		assertEquals("III", romanNumeral.convertFromIntToRomanNumeral("3")
+		assertEquals("III", romanNumeral.convertFromIntegerToRomanNumeral("3")
 				.toString());
 
 	}
 
 	@Test
 	public void whenGivenFourOutputShouldBeIV() {
-		assertEquals("IV", romanNumeral.convertFromIntToRomanNumeral("4")
+		assertEquals("IV", romanNumeral.convertFromIntegerToRomanNumeral("4")
 				.toString());
 	}
 	
 	@Test
 	public void whenGivenNineOutputShouldBeIX() {
-		assertEquals("IX", romanNumeral.convertFromIntToRomanNumeral("9")
+		assertEquals("IX", romanNumeral.convertFromIntegerToRomanNumeral("9")
 				.toString());
 	}
 	
 	@Test
 	public void whenGivenElevenOutputShouldBeXI() {
-		assertEquals("XI", romanNumeral.convertFromIntToRomanNumeral("11")
+		assertEquals("XI", romanNumeral.convertFromIntegerToRomanNumeral("11")
 				.toString());
 	}
 	
 	@Test
 	public void whenGivenSeventeenOutputShouldBeXVII(){
-		assertEquals("XVII", romanNumeral.convertFromIntToRomanNumeral("17")
+		assertEquals("XVII", romanNumeral.convertFromIntegerToRomanNumeral("17")
 				.toString());
 	}
 	
 	@Test
 	public void whenGivenTwentyThreeOutputShouldBeXXIII(){
-		assertEquals("XXIII", romanNumeral.convertFromIntToRomanNumeral("23")
+		assertEquals("XXIII", romanNumeral.convertFromIntegerToRomanNumeral("23")
 				.toString());
 	
 	}
 	
 	@Test
 	public void whenGivenThirtyThreeAndSeventyEightOutputShouldBeXXXIIIandLXVIII(){
-		assertEquals("XXIII", romanNumeral.convertFromIntToRomanNumeral("23")
+		assertEquals("XXIII", romanNumeral.convertFromIntegerToRomanNumeral("23")
 				.toString());
 
 	}
 	
 	@Test
 	public void whenGivenOneHundredNinetyNineOutputShouldBeCXCIX(){
-		assertEquals("CXCIX", romanNumeral.convertFromIntToRomanNumeral("199")
+		assertEquals("CXCIX", romanNumeral.convertFromIntegerToRomanNumeral("199")
 				.toString());
 	}
 	
 	@Test
 	public void whenGivenNineHundredNinetyNineOutputShouldBeCMXCIX(){
-		assertEquals("CMXCIX", romanNumeral.convertFromIntToRomanNumeral("999")
+		assertEquals("CMXCIX", romanNumeral.convertFromIntegerToRomanNumeral("999")
 				.toString());
 	}
 	@Test
 	public void whenGivenThreeThousdandSixHundredNinetyNineOutputShouldBeMMMDCXCIX(){
-		assertEquals("MMMDCXCIX", romanNumeral.convertFromIntToRomanNumeral("3699")
+		assertEquals("MMMDCXCIX", romanNumeral.convertFromIntegerToRomanNumeral("3699")
 				.toString());
 	}
 }
