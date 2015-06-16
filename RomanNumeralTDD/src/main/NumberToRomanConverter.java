@@ -10,10 +10,10 @@ public class NumberToRomanConverter {
 		
 		char[] inputCharacters =convertStringInputToCharArray(inputNumber, inputLength);
 		
-		thousandsConverter(inputCharacters[inputLength-4]);
-		hundredconverter(inputCharacters[inputLength-3]);
-		tensconverter(inputCharacters[inputLength-2]);
-		onesConverter(inputCharacters[inputLength-1]);
+		convertThousandsDigit(inputCharacters[inputLength-4]);
+		convertHundredsDigit(inputCharacters[inputLength-3]);
+		convertTensDigit(inputCharacters[inputLength-2]);
+		convertOnesDigit(inputCharacters[inputLength-1]);
 		
 		return answer;
 
@@ -27,7 +27,7 @@ public class NumberToRomanConverter {
 		return inputCharacters;
 	}
 	
-	private static void thousandsConverter(char thousandsNumber) {
+	private static void convertThousandsDigit(char thousandsNumber) {
 		switch (thousandsNumber) {
 
 		case '1':
@@ -39,12 +39,11 @@ public class NumberToRomanConverter {
 		case '3':
 			answer.append("MMM");
 			break;
-			// Stops at 3999 due to change in notation above 4000.
 		}
 
 	}
 
-	private static void onesConverter(char onesNumber) {
+	private static void convertOnesDigit(char onesNumber) {
 		switch (onesNumber) {
 
 		case '3':
@@ -79,7 +78,7 @@ public class NumberToRomanConverter {
 
 	}
 
-	private static void tensconverter(char tensNumber) {
+	private static void convertTensDigit(char tensNumber) {
 		switch (tensNumber) {
 
 		case '9':
@@ -120,7 +119,7 @@ public class NumberToRomanConverter {
 		}
 	}
 
-	private static void hundredconverter(char hundredsNumber) {
+	private static void convertHundredsDigit(char hundredsNumber) {
 		switch (hundredsNumber) {
 		case '9':
 			answer.append("CM");
