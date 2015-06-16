@@ -10,34 +10,10 @@ public class NumberToRomanConverter {
 		
 		char[] inputCharacters =convertStringInputToCharArray(inputNumber, inputLength);
 		
-		char tensNumber = '0';
-		char onesNumber = '0';
-		char hundredsNumber = '0';
-		char thousandsNumber = '0';
-
-		if (inputLength == 4) {
-			thousandsNumber = inputCharacters[inputLength -4];
-			hundredsNumber = inputCharacters[inputLength - 3];
-			tensNumber = inputCharacters[inputLength - 2];
-			onesNumber = inputCharacters[inputLength - 1];
-		}
-		
-		else if (inputLength == 3) {
-			hundredsNumber = inputCharacters[inputLength - 3];
-			tensNumber = inputCharacters[inputLength - 2];
-			onesNumber = inputCharacters[inputLength - 1];
-		}
-
-		else if (inputLength == 2) {
-			tensNumber = inputCharacters[inputLength - 2];
-			onesNumber = inputCharacters[inputLength - 1];
-		} else {
-			onesNumber = inputCharacters[0];
-		}
-		thousandsConverter(thousandsNumber);
-		hundredconverter(hundredsNumber);
-		tensconverter(tensNumber);
-		onesConverter(onesNumber);
+		thousandsConverter(inputCharacters[inputLength-4]);
+		hundredconverter(inputCharacters[inputLength-3]);
+		tensconverter(inputCharacters[inputLength-2]);
+		onesConverter(inputCharacters[inputLength-1]);
 		
 		return answer;
 
